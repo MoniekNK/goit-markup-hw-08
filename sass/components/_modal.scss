@@ -1,0 +1,188 @@
+.backdrop {
+  position: fixed;
+  visibility: visible;
+  opacity: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: getColor("backdrop-background-color");
+  transition-property: opacity, transform, visibility;
+  transition-duration: 250ms;
+  z-index: 100;
+}
+
+.is-hidden {
+  transform: rotate(100deg);
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.modal {
+  background-color: getColor("page-quarternary-background-color");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      transform: rotate(100deg);
+    }
+  }
+
+  &__label {
+    color: getColor("text-secondary-color");
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  &__form {
+    display: block;
+    padding: 40px;
+  }
+  &__header {
+    color: getColor("text-primary-color");
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    line-height: 1.15;
+    padding-bottom: 12px;
+  }
+
+  &__input input {
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-top: 4px;
+    padding-left: 42px;
+    outline: none;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__input input:focus {
+    border-color: getColor("object-primary-background-color");
+  }
+  &__input {
+    position: relative;
+  }
+  &__input svg {
+    position: absolute;
+    left: 15px;
+    top: 27px;
+    fill: getColor("text-primary-color");
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__input input:focus + svg {
+    fill: getColor("object-primary-background-color");
+  }
+
+  &__form textarea {
+    resize: none;
+    width: 448px;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-top: 4px;
+    padding: 12px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    outline: none;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__form textarea::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &__form textarea:focus {
+    border-color: getColor("object-primary-background-color");
+  }
+}
+
+.checkbox__text {
+  font-size: 14px;
+  line-height: 1.46;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  color: getColor("text-secondary-color");
+  margin-bottom: 28px;
+}
+.modal__links {
+  text-decoration: underline;
+  color: getColor("object-primary-background-color");
+  transition-property: transform, font-weight;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__click {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 15px;
+  visibility: hidden;
+  border-radius: 2px;
+  top: 0;
+  margin-left: 15px;
+}
+
+.modal__clickBox {
+  position: absolute;
+  border-radius: 2px;
+  margin-left: 15px;
+}
+
+.modal__checkboxInput:checked ~ .modal__clickBox {
+  display: none;
+}
+
+.modal__btn {
+  color: getColor("text-tertiary-color");
+  background: getColor("object-primary-background-color");
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.06em;
+  margin-top: 30px;
+}

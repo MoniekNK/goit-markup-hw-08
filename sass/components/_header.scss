@@ -1,0 +1,170 @@
+.header {
+  background-color: getColor("object-secondary-background-color");
+  border-bottom: 1px solid getColor("header-border-bottom-color");
+  width: 100%;
+}
+
+.header__border {
+  border-bottom: 1px solid getColor("header-border-bottom-color");
+}
+
+.logo {
+  color: getColor("text-quaternary-color");
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.logo__color {
+  color: getColor("object-primary-background-color");
+}
+
+.logo__color--black {
+  color: getColor("text-quaternary-color");
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.menu__list {
+  list-style-type: none;
+  display: flex;
+  column-gap: 46px;
+  font-weight: 500;
+  padding-left: 0;
+  color: getColor("text-primary-color");
+  margin-left: 93px;
+}
+
+.menu__list--start {
+  text-decoration: none;
+  color: getColor("text-primary-color");
+}
+
+.menu__link {
+  text-decoration: none;
+  color: getColor("text-primary-color");
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: getColor("object-primary-background-color");
+  }
+}
+.menu__link--active::after {
+  background-color: getColor("object-primary-background-color");
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 58px;
+  border-radius: 2px;
+}
+
+.menu__link--active {
+  color: getColor("object-primary-background-color");
+}
+
+.contact {
+  color: getColor("text-secondary-color");
+  display: flex;
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  gap: 30px;
+  margin-left: auto;
+}
+
+.contact__item {
+  color: getColor("text-secondary-color");
+  text-decoration: none;
+
+  .contact__item:hover,
+  .contact__item:focus {
+    color: getColor("object-primary-background-color");
+  }
+}
+
+.contact__link {
+  color: getColor("text-secondary-color");
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: getColor("object-primary-background-color");
+  }
+}
+.contact__icon {
+  fill: getColor("parrent-color");
+}
+
+.slogan {
+  background-color: getColor("page-secondary-background-color");
+  background-image: url("../images/sloganimg.jpg"),
+    linear-gradient(
+      getColor("background-color-for-gradient"),
+      getColor("background-color-for-gradient")
+    );
+  display: flex;
+  background-size: 1600px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  &__title {
+    color: getColor("text-tertiary-color");
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin: 0 auto;
+    width: 696px;
+  }
+
+  &__btn {
+    display: block;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: getColor("object-secondary-background-color");
+    background-color: getColor("object-primary-background-color");
+    box-shadow: 0px 4px 4px getColor("primary-box-shadow-color");
+    border-radius: 4px;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+}
