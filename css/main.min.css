@@ -676,6 +676,10 @@
   font-weight: 400;
   color: #757575;
   margin-bottom: 28px;
+  margin-top: 20px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .modal__links {
   text-decoration: underline;
