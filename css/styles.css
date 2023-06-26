@@ -210,6 +210,16 @@ body {
   fill: var(--parrent-color);
 }
 
+.menu-toggle__icon {
+  fill: #212121;
+  cursor: pointer;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .slogan {
   background-color: var(--page-secondary-background-color);
   background-image: url("../images/sloganimg.jpg"),

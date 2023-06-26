@@ -26,4 +26,9 @@ ul {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+
+  @include desktop-size {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }

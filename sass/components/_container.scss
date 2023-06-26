@@ -9,4 +9,11 @@
     height: 80px;
     position: relative;
   }
+
+  @include tablet-size {
+    max-width: 768px;
+  }
+  @include desktop-size {
+    max-width: 1200px;
+  }
 }
