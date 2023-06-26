@@ -947,7 +947,9 @@ body {
   letter-spacing: 0.03em;
   font-weight: 400;
   color: var(----text-secondary-color);
-  margin-bottom: 28px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
   margin-left: 8px;
 }
 .modal__links {
