@@ -948,8 +948,6 @@ body {
   font-weight: 400;
   color: var(----text-secondary-color);
   margin-bottom: 28px;
-  padding-bottom: 31px;
-  margin-top: 20px;
 }
 .modal__links {
   text-decoration: underline;
@@ -968,13 +966,13 @@ body {
   visibility: hidden;
   border-radius: 2px;
   top: 0;
-  margin-left: 15px;
+  margin-left: 37px;
 }
 
 .modal__clickBox {
   position: absolute;
   border-radius: 2px;
-  margin-left: 15px;
+  margin-left: 37px;
 }
 
 .modal__btn {
