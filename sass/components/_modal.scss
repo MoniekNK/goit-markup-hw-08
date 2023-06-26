@@ -140,6 +140,7 @@
   font-weight: 400;
   color: getColor("text-secondary-color");
   margin-bottom: 28px;
+  margin-left: 8px;
 }
 .modal__links {
   text-decoration: underline;
@@ -158,13 +159,13 @@
   visibility: hidden;
   border-radius: 2px;
   top: 0;
-  margin-left: 37px;
+  margin-left: 55px;
 }
 
 .modal__clickBox {
   position: absolute;
   border-radius: 2px;
-  margin-left: 37px;
+  margin-left: 55px;
 }
 
 .modal__checkboxInput:checked ~ .modal__clickBox {
