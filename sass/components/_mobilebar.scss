@@ -1,0 +1,31 @@
+.menu-toggle {
+  background-color: inherit;
+  border: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  margin: 0;
+  padding: 0;
+
+  @include tablet-size {
+    display: none;
+  }
+  &__icon {
+    fill: getColor("text-primary-color");
+    cursor: pointer;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      fill: getColor("object-primary-background-color");
+    }
+  }
+}
