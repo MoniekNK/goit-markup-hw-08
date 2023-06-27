@@ -81,7 +81,6 @@
   row-gap: 10px;
   padding-left: 0;
   flex-direction: column;
-
   @include mobile-size {
     display: none;
   }
