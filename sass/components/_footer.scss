@@ -31,6 +31,31 @@
     text-decoration: none;
     line-height: 1.19;
     letter-spacing: 0.03em;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    text-decoration: none;
+
+    @include tablet-size {
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
+    @include desktop-size {
+      padding-top: 24px;
+      padding-bottom: 25px;
+    }
+    .logo__color {
+      font-family: "Raleway";
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.16;
+      letter-spacing: 0.03em;
+      color: getColor("object-primary-background-color");
+
+      @include desktop-size {
+        font-size: 26px;
+        line-height: 1.19;
+      }
+    }
 
     &__first {
       color: getColor("object-primary-background-color");

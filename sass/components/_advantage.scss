@@ -8,13 +8,14 @@
   padding-right: 15px;
 
   &__list {
-    display: flex;
     padding-left: 0;
     justify-content: space-between;
     gap: 30px;
     flex-wrap: wrap;
+
     @include tablet-size {
       flex-direction: row;
+      display: flex;
     }
   }
 
