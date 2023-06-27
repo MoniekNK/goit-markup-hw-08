@@ -78,13 +78,9 @@
 .contact {
   color: getColor("text-secondary-color");
   display: flex;
-  font-size: 14px;
-  line-height: 1.14;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  gap: 30px;
-  margin-left: auto;
+  row-gap: 10px;
+  padding-left: 0;
+  flex-direction: column;
 
   @include mobile-size {
     display: none;
@@ -93,7 +89,7 @@
     flex-direction: row;
     column-gap: 30px;
   }
-  .contact__item {
+  &__item {
     color: getColor("text-secondary-color");
     text-decoration: none;
 
@@ -112,7 +108,6 @@
     text-decoration: none;
     display: flex;
     column-gap: 10px;
-    align-items: center;
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -124,6 +119,7 @@
   }
   .contact__icon {
     fill: getColor("parrent-color");
+    width: 16px;
   }
 }
 

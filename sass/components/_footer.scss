@@ -1,18 +1,10 @@
 .footer {
   background-color: getColor("page-secondary-background-color");
-  text-decoration: none;
+  display: block;
+  text-align: center;
   padding-top: 60px;
   padding-bottom: 60px;
 
-  &__container {
-    display: flex;
-  }
-
-  &__box {
-    flex-direction: column;
-    display: flex;
-    margin-right: 70px;
-  }
   @include tablet-size {
     display: flex;
     flex-direction: column;
