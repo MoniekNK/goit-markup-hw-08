@@ -9,6 +9,11 @@
     letter-spacing: 0.03em;
     text-align: center;
     margin-bottom: 50px;
+    @include desktop-size {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.16;
+    }
   }
 
   &__list {
@@ -16,6 +21,10 @@
     justify-content: center;
     align-items: center;
     column-gap: 30px;
+
+    @include desktop-size {
+      flex-wrap: nowrap;
+    }
   }
 
   &__item {
@@ -27,7 +36,14 @@
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+    @include tablet-size {
+      max-width: 226px;
+      padding: 16px 60px;
+    }
+    @include desktop-size {
+      max-width: 170px;
+      padding: 16px 32px;
+    }
     &:hover,
     &:focus {
       fill: getColor("object-primary-background-color");

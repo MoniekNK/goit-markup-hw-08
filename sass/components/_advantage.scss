@@ -9,15 +9,28 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    flex-wrap: wrap;
+    @include tablet-size {
+      flex-direction: row;
+    }
   }
 
   &__item {
+    max-width: 450px;
     display: flex;
     padding-left: 15px;
     padding-right: 15px;
     column-gap: 30px;
     margin-top: 30px;
     justify-content: space-between;
+    max-width: 450px;
+
+    @include tablet-size {
+      max-width: 354px;
+    }
+    @include desktop-size {
+      max-width: 270px;
+    }
   }
 
   &__icons {
@@ -33,6 +46,9 @@
     letter-spacing: 0.03em;
     margin-top: 30px;
     color: getColor("text-primary-color");
+    @include tablet-size {
+      text-align: left;
+    }
   }
 
   &__text {
