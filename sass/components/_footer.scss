@@ -177,6 +177,13 @@
       color: getColor("text-tertiary-color");
       padding-bottom: 20px;
       padding-top: 12px;
+      @include tablet-size {
+        padding-top: 0;
+      }
+
+      @include desktop-size {
+        padding-top: 12px;
+      }
     }
 
     &__top {
@@ -200,12 +207,12 @@
       text-align: center;
       width: 200px;
       height: 50px;
+      font-weight: 700;
       color: getColor("text-tertiary-color");
       background: getColor("object-primary-background-color");
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
       border-radius: 4px;
       font-style: normal;
-      font-weight: 700;
       font-size: 16px;
       line-height: 1.6;
       letter-spacing: 0.06em;
