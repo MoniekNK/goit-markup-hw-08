@@ -620,7 +620,7 @@ body {
 .join__item:hover,
 .join__item:focus {
   cursor: pointer;
-  fill: var(--social-links-icon-hover-color);
+  fill: var(--page-quarternary-background-color);
   background-color: var(--overlay-background);
   border-radius: 50%;
 }
