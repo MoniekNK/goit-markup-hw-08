@@ -106,25 +106,25 @@
 }
 
 .contact {
-  color: getColor("text-secondary-color");
-  display: flex;
-  row-gap: 10px;
-  padding-left: 0;
-  flex-direction: column;
+  display: none;
 
-  @include mobile-size {
-    display: none;
+  @include tablet-size {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
+
   @include desktop-size {
     column-gap: 30px;
+    flex-direction: row;
   }
 
   &__item {
     color: getColor("text-secondary-color");
     text-decoration: none;
 
-    .contact__item:hover,
-    .contact__item:focus {
+    &:hover,
+    &:focus {
       color: getColor("object-primary-background-color");
     }
   }
@@ -145,10 +145,11 @@
     &:hover,
     &:focus {
       color: getColor("object-primary-background-color");
+      cursor: pointer;
     }
   }
   .contact__icon {
     fill: getColor("parrent-color");
-    width: 16px;
+    margin-right: 10 px;
   }
 }
