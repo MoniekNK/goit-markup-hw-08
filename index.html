@@ -210,9 +210,18 @@
                 class="team__img"
                 src="images/img3.jpg"
                 alt="foto
-          pracownika Product Designer"
-                width="270"
-                height="260"
+           Product Designer"
+                srcset="
+           ./images/john_doe_1_270.jpg 270w,
+           ./images/john_doe_1_270@2x.jpg 540w,
+           ./images/images/john_doe_1_354.jpg 354w,
+           ./images/john_doe_1_354@2x.jpg 708w,
+           ./images/john_doe_1_450.jpg 450w
+           ./images/john_doe_1_450@2x.jpg 900w,
+         "
+                sizes="
+         (max-width: 768px) 354px,  
+         (max-width: 1199px) 540px, 900px"
               />
 
               <h3 class="team__top">John Doe</h3>
@@ -260,7 +269,7 @@
                 class="team__img"
                 src="images/img4.jpg"
                 alt="foto
-          pracownika Frontend Developer"
+           Frontend Developer"
                 width="270"
                 height="260"
               />
@@ -356,7 +365,7 @@
                 class="team__img"
                 src="images/img6.jpg"
                 alt="foto
-          pracownika UI Designer"
+         UI Designer"
                 width="270"
                 height="260"
               />

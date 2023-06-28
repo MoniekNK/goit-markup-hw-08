@@ -179,7 +179,6 @@
 
     @include desktop-size {
       // display: block;
-
       margin-left: 70px;
       margin-top: 30px;
       position: relative;
@@ -194,6 +193,7 @@
       color: getColor("text-tertiary-color");
       padding-bottom: 20px;
       padding-top: 12px;
+
       @include tablet-size {
         padding-top: 0;
       }
