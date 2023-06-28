@@ -27,26 +27,31 @@
 }
 
 .menu {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  justify-content: space-between;
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   @include mobile-size {
     display: none;
   }
+}
 
-  .menu__list {
-    display: flex;
-    column-gap: 46px;
-    padding-left: 0;
+.menu__list {
+  display: flex;
+  column-gap: 46px;
+  padding-left: 0;
+  color: getColor("text-primary-color");
+  margin-left: 93px;
+
+  &--start {
+    text-decoration: none;
     color: getColor("text-primary-color");
 
-    &--start {
-      text-decoration: none;
-      color: getColor("text-primary-color");
-      @include desktop-size {
-        margin-right: 345px;
-      }
+    @include desktop-size {
+      margin-right: 345px;
     }
   }
 }
@@ -84,6 +89,7 @@
   row-gap: 10px;
   padding-left: 0;
   flex-direction: column;
+
   @include mobile-size {
     display: none;
   }
@@ -91,6 +97,7 @@
     flex-direction: row;
     column-gap: 30px;
   }
+
   &__item {
     color: getColor("text-secondary-color");
     text-decoration: none;
@@ -122,54 +129,5 @@
   .contact__icon {
     fill: getColor("parrent-color");
     width: 16px;
-  }
-}
-
-.slogan {
-  background-color: getColor("page-secondary-background-color");
-  background-image: url("../images/sloganimg.jpg"),
-    linear-gradient(
-      getColor("background-color-for-gradient"),
-      getColor("background-color-for-gradient")
-    );
-  display: flex;
-  background-size: 1600px auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-
-  &__title {
-    color: getColor("text-tertiary-color");
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 44px;
-    font-weight: 900;
-    line-height: 1.4;
-    letter-spacing: 0.06em;
-    text-align: center;
-    margin: 0 auto;
-    width: 696px;
-  }
-
-  &__btn {
-    display: block;
-    font-family: "Roboto";
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    color: getColor("object-secondary-background-color");
-    background-color: getColor("object-primary-background-color");
-    box-shadow: 0px 4px 4px getColor("primary-box-shadow-color");
-    border-radius: 4px;
-    border: none;
-    padding: 10px 40px;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
   }
 }
