@@ -33,10 +33,10 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  @include tablet-size {
+  @include tablet {
     min-width: 450px;
   }
-  @include desktop-size {
+  @include desktop {
     min-width: 528px;
   }
   &__close {
@@ -71,7 +71,7 @@
     position: relative;
     display: inline-block;
     cursor: pointer;
-    @include desktop-size {
+    @include desktop {
       line-height: 1.71;
     }
   }
@@ -88,7 +88,7 @@
     letter-spacing: 0.03em;
     line-height: 1.15;
     padding-bottom: 12px;
-    @include desktop-size {
+    @include desktop {
       line-height: 1.15;
     }
   }

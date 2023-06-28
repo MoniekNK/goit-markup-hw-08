@@ -490,12 +490,13 @@ body {
 
 .footer {
   background-color: var(--page-secondary-background-color);
-  text-decoration: none;
+  display: flex;
+  text-align: center;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.footer__container {
+.footer__wrapper {
   display: flex;
 }
 
@@ -513,7 +514,9 @@ body {
   text-decoration: none;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  margin-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-decoration: none;
 }
 
 .logo--set {
@@ -542,26 +545,8 @@ body {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
   margin-right: 70px;
 }
-.address__item .address__link:hover,
-.address__item .address__link:focus {
-  color: var(--text-tertiary-color);
-}
-
-.address__item {
-  color: var(--alpha-color);
-  margin-top: 9px;
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  row-gap: 9px;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .address__link {
   color: var(text-tertiary-color);
   font-size: 14px;
@@ -575,6 +560,23 @@ body {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.address__item {
+  color: var(--alpha-color);
+  margin-top: 9px;
+  margin-left: 0px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  row-gap: 9px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.address__item .address__link:hover,
+.address__item .address__link:focus {
+  color: var(--text-tertiary-color);
+  transform: scale(1.05);
 }
 
 .join {

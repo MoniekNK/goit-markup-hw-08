@@ -10,7 +10,7 @@
     letter-spacing: 0.03em;
     margin-bottom: 50px;
 
-    @include desktop-size {
+    @include desktop {
       margin-bottom: 50px;
       font-size: 36px;
       line-height: 1.16;
@@ -22,7 +22,7 @@
     width: 100%;
     margin-top: 50px;
 
-    @include desktop-size {
+    @include desktop {
       display: flex;
       justify-content: space-between;
       flex-wrap: nowrap;
@@ -36,10 +36,10 @@
       0px 1px 3px getColor("secondary-box-shadow-color");
     border-radius: 0px 0px 4px 4px;
 
-    @include tablet-size {
+    @include tablet {
       max-width: 354px;
     }
-    @include desktop-size {
+    @include desktop {
       max-width: 270px;
     }
   }

@@ -3,10 +3,10 @@
   background-color: getColor("object-secondary-background-color");
   border-bottom: 1px solid getColor("header-border-bottom-color");
 
-  @include tablet-size {
+  @include tablet {
     padding: 21px 0;
   }
-  @include desktop-size {
+  @include desktop {
     display: flex;
   }
 
@@ -16,13 +16,13 @@
     justify-content: space-between;
     height: 60px;
 
-    @include tablet-size {
+    @include tablet {
       display: flex;
       align-items: center;
       height: 80px;
       padding: 10px 0;
     }
-    @include desktop-size {
+    @include desktop {
       align-items: center;
       height: 80px;
     }
@@ -51,11 +51,11 @@
   display: none;
   margin-left: auto;
 
-  @include tablet-size {
+  @include tablet {
     display: flex;
     margin-left: 83px;
   }
-  @include desktop-size {
+  @include desktop {
     margin-left: 93px;
   }
 }
@@ -70,10 +70,10 @@
     text-decoration: none;
     color: getColor("text-primary-color");
 
-    @include desktop-size {
+    @include desktop {
       margin-left: 93px;
 
-      @include tablet-size {
+      @include tablet {
         margin-left: 83px;
       }
     }
@@ -116,13 +116,13 @@
   display: none;
   margin-left: auto;
 
-  @include tablet-size {
+  @include tablet {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 
-  @include desktop-size {
+  @include desktop {
     column-gap: 30px;
     flex-direction: row;
   }

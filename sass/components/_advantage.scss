@@ -10,10 +10,9 @@
   &__list {
     padding-left: 0;
     display: flex;
-
     gap: 30px;
 
-    @include tablet-size {
+    @include tablet {
       display: flex;
     }
   }
@@ -21,10 +20,10 @@
   &__item {
     max-width: 450px;
 
-    @include tablet-size {
+    @include tablet {
       max-width: 354px;
     }
-    @include desktop-size {
+    @include desktop {
       max-width: 270px;
     }
   }
@@ -46,7 +45,7 @@
     margin: 30px 0 10px;
     color: getColor("text-primary-color");
 
-    @include tablet-size {
+    @include tablet {
       text-align: left;
     }
   }

@@ -1,147 +1,147 @@
 .footer {
   background-color: getColor("page-secondary-background-color");
-  display: block;
+  display: flex;
   text-align: center;
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @include tablet-size {
-    display: flex;
-    flex-direction: column;
-  }
-
-  @include desktop-size {
-    text-align: start;
-    flex-direction: row;
-  }
-
-  .flex-wrapper {
-    @include tablet-size {
+  @include tablet {
+    &__wrapper {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      flex-wrap: wrap;
     }
   }
+  @include desktop {
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
 
-  .logo {
-    color: getColor(-"text-quaternary-color");
+.logo {
+  color: getColor(-"text-quaternary-color");
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  text-decoration: none;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-decoration: none;
+
+  @include tablet {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @include desktop {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+  .logo__color {
     font-family: "Raleway";
     font-weight: 700;
-    font-size: 26px;
-    text-decoration: none;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    text-decoration: none;
+    color: getColor("object-primary-background-color");
 
-    @include tablet-size {
-      padding-top: 26px;
-      padding-bottom: 26px;
-    }
-    @include desktop-size {
-      padding-top: 24px;
-      padding-bottom: 25px;
-    }
-    .logo__color {
-      font-family: "Raleway";
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 1.16;
-      letter-spacing: 0.03em;
-      color: getColor("object-primary-background-color");
-
-      @include desktop-size {
-        font-size: 26px;
-        line-height: 1.19;
-      }
-    }
-
-    &__first {
-      color: getColor("object-primary-background-color");
-    }
-
-    &__second {
-      color: getColor("text-tertiary-color");
-    }
-
-    &__second--white {
-      color: getColor("text-tertiary-color");
+    @include desktop {
+      font-size: 26px;
+      line-height: 1.19;
     }
   }
 
-  .address__list {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 9px;
-    font-weight: 400;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-    @include desktop-size {
-      row-gap: 9px;
-      padding-left: 15px;
-      margin-bottom: 0;
-    }
+  &__first {
+    color: getColor("object-primary-background-color");
   }
 
-  .address__link {
+  &__second {
     color: getColor("text-tertiary-color");
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    display: flex;
-    text-decoration: none;
-    font-style: normal;
-    font-weight: 400;
-    gap: 9px;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    padding-top: 20px;
   }
 
-  .address__item {
-    color: getColor("alpha-color");
-    margin-top: 9px;
-    margin-left: 0px;
-    font-weight: 400;
-    display: flex;
+  &__second--white {
+    color: getColor("text-tertiary-color");
+  }
+}
+
+.address__list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 9px;
+  font-weight: 400;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include desktop {
+    align-items: flex-start;
+  }
+  @include tablet {
     flex-direction: column;
-    row-gap: 9px;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
-      color: getColor("text-tertiary-color");
-    }
+    right: 50%;
   }
+}
 
-  &__icon {
-    display: block;
-    color: getColor("social-links-secondary-icon-color");
+.address__link {
+  color: getColor("text-tertiary-color");
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  display: flex;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  gap: 9px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 20px;
+}
+
+.address__item {
+  color: getColor("alpha-color");
+  margin-top: 9px;
+  margin-left: 0px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  row-gap: 9px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: getColor("text-tertiary-color");
+    transform: scale(1.05);
   }
+}
 
-  &__item {
-    fill: getColor("social-links-secondary-icon-color");
-    background-color: getColor("social-links-footer-background-color");
+&__icon {
+  display: block;
+  color: getColor("social-links-secondary-icon-color");
+}
+
+&__item {
+  fill: getColor("social-links-secondary-icon-color");
+  background-color: getColor("social-links-footer-background-color");
+  border-radius: 50%;
+  padding: 12px;
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    fill: getColor("social-links-icon-hover-color");
+    background-color: getColor("social-links-primary-background-color");
     border-radius: 50%;
-    padding: 12px;
-    transition-property: fill, background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
-      cursor: pointer;
-      fill: getColor("social-links-icon-hover-color");
-      background-color: getColor("social-links-primary-background-color");
-      border-radius: 50%;
-    }
   }
 }
 

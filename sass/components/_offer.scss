@@ -1,5 +1,5 @@
 .offer {
-  @include desktop-size {
+  @include desktop {
     display: flex;
     background-color: getColor("page-quarternary-background-color");
     display: none;

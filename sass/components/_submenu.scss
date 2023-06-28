@@ -2,10 +2,10 @@
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 40px;
-  @include tablet-size {
+  @include tablet {
     padding-bottom: 30px;
   }
-  @include desktop-size {
+  @include desktop {
     padding-bottom: 50px;
   }
 
@@ -19,7 +19,7 @@
     column-gap: 8px;
     row-gap: 15px;
     padding-left: 0;
-    @include tablet-size {
+    @include tablet {
       justify-content: center;
       row-gap: 0;
     }
