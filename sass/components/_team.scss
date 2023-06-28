@@ -9,13 +9,24 @@
     line-height: 1.16;
     letter-spacing: 0.03em;
     margin-bottom: 50px;
-  }
 
+    @include desktop-size {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.16;
+    }
+  }
   &__list {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-top: 50px;
+
+    @include desktop-size {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
   }
 
   &__item {
@@ -24,6 +35,13 @@
       0px 1px 1px getColor("tertiary-box-shadow-color"),
       0px 1px 3px getColor("secondary-box-shadow-color");
     border-radius: 0px 0px 4px 4px;
+
+    @include tablet-size {
+      max-width: 354px;
+    }
+    @include desktop-size {
+      max-width: 270px;
+    }
   }
 
   &__img {
