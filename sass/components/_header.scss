@@ -40,7 +40,7 @@
 }
 
 .menu__list {
-  display: flex;
+  display: none;
   column-gap: 46px;
   padding-left: 0;
   color: getColor("text-primary-color");
