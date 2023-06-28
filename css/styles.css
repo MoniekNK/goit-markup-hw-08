@@ -368,7 +368,6 @@ body {
 /* TEAM */
 .team {
   background-color: var(--page-tertiary-background-color);
-  width: 100%;
 }
 
 .team__header {
@@ -382,9 +381,11 @@ body {
 
 .team__list {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
   margin-top: 50px;
+  align-items: center;
 }
 
 .team__item {
