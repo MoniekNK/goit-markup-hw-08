@@ -63,13 +63,14 @@
   column-gap: 46px;
   padding-left: 0;
   color: getColor("text-primary-color");
-  margin-left: 93px;
+  margin-left: 83px;
 
   &--start {
     text-decoration: none;
     color: getColor("text-primary-color");
 
     @include desktop-size {
+      margin-left: 93px;
     }
   }
 }
