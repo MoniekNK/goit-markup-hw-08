@@ -27,11 +27,12 @@
       getColor("background-color-for-gradient")
     );
   display: flex;
-  background-size: 767px 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  width: 100%;
 
   @include desktop {
     padding: 200px 0;

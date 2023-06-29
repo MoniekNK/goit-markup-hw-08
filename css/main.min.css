@@ -168,13 +168,11 @@
 @media screen and (min-width: 768px) {
   .customers__item {
     max-width: 226px;
-    padding: 16px 60px;
   }
 }
 @media screen and (min-width: 1200px) {
   .customers__item {
     max-width: 170px;
-    padding: 16px 32px;
   }
 }
 .customers__item:hover,
@@ -1166,11 +1164,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-size: 767px 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  width: 100%;
 }
 @media screen and (min-width: 1200px) {
   .slogan {

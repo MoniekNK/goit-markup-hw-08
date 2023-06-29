@@ -289,6 +289,7 @@ body {
   column-gap: 30px;
   margin-top: 30px;
   justify-content: space-between;
+  flex-basis: calc((100% - 90px) / 4);
 }
 .advantage__icons {
   background-color: var(--page-tertiary-background-color);
