@@ -51,11 +51,16 @@
     margin-bottom: 10px;
     line-height: 1.14;
     letter-spacing: 0.03em;
-    margin: 30px 0 10px;
+    margin: 0 auto;
+    max-width: 365px;
     color: getColor("text-primary-color");
 
     @include tablet {
       text-align: left;
+    }
+    @include desktop {
+      font-size: 44px;
+      max-width: 696px;
     }
   }
 
