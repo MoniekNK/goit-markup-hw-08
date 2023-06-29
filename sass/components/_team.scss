@@ -13,13 +13,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
     align-items: center;
 
     @include tablet {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      gap: 30px;
     }
     @include desktop {
       display: flex;
