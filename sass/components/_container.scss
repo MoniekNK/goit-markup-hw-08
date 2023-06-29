@@ -21,7 +21,7 @@
 
 .slogan {
   background-color: getColor("page-secondary-background-color");
-  background-image: url("../images/sloganimg.jpg"),
+  background-image: url("../images/imgslogan1@1x.jpg"),
     linear-gradient(
       getColor("background-color-for-gradient"),
       getColor("background-color-for-gradient")
@@ -36,30 +36,20 @@
 
   @include desktop {
     padding: 118px 0;
-    background-size: 1600px 100%;
+    background-size: contain;
   }
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     & {
-      background-image: url("../images/background-image@2x.jpg"),
+      background-image: url("../images/imgslogan1@2x.jpg"),
         linear-gradient(
           getColor("background-color-for-gradient"),
           getColor("background-color-for-gradient")
         );
     }
   }
-  @media screen and (min-device-pixel-ratio: 3),
-    screen and (min-resolution: 288dpi),
-    screen and (min-resolution: 3dppx) {
-    & {
-      background-image: url("../images/background-image@3x.jpg"),
-        linear-gradient(
-          getColor("background-color-for-gradient"),
-          getColor("background-color-for-gradient")
-        );
-    }
-  }
+
   &__title {
     color: getColor("text-tertiary-color");
     font-weight: 900;
