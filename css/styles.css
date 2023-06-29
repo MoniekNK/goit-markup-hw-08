@@ -339,14 +339,16 @@ body {
 }
 
 .offer__item {
-  display: block;
+  flex-basis: calc((100% - 60px) / 3);
+  position: relative;
 }
 
 .offer__title {
   position: relative;
 }
 .offer__image {
-  position: relative;
+  display: block;
+  margin: 0 auto;
 }
 
 .offer__text {
