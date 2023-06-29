@@ -191,6 +191,11 @@
     color: getColor("text-tertiary-color");
     padding-bottom: 20px;
     padding-top: 12px;
+    justify-content: center;
+
+    @include desktop {
+      justify-content: start;
+    }
   }
 
   &__top {
