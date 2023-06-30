@@ -35,10 +35,14 @@
 
   @include tablet {
     width: 450px;
+    max-height: 536px;
   }
 
   @include desktop {
-    max-width: 528px;
+    padding-left: 40px;
+    padding-right: 40px;
+    min-width: 528px;
+    height: 581px;
   }
   &__close {
     position: absolute;
@@ -54,6 +58,7 @@
 
     &:hover {
       transform: scale(1.1);
+      fill: getColor("social-links-primary-background-color");
     }
     &:active {
       transform: rotate(100deg);
