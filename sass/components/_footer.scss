@@ -196,6 +196,7 @@
     @include desktop {
       justify-content: start;
       display: flex;
+      padding-top: 12px;
     }
   }
 
@@ -211,26 +212,32 @@
     height: 50px;
     width: 358px;
     padding: 15px 16px;
+    margin-bottom: 30px;
   }
 
   &__btn {
-    width: 200px;
-    height: 50px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 30px;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    letter-spacing: 0.06em;
+    width: 200px;
+    height: 50px;
     color: getColor("text-tertiary-color");
     background: getColor("object-primary-background-color");
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
     border: none;
-    justify-content: center;
     cursor: pointer;
+    margin-left: 12px;
+    padding-left: 28px;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     @include desktop {
       margin-left: 12px;
       margin-top: 12px;
@@ -243,14 +250,14 @@
 
     &__icon {
       fill: getColor("parrent-color");
-    }
 
-    &__icon--end {
-      margin-left: 24px;
-    }
+      &__icon--end {
+        margin-left: 24px;
+      }
 
-    form {
-      display: flex;
+      form {
+        display: flex;
+      }
     }
   }
 }

@@ -36,19 +36,28 @@
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
-}
+  @include tablet {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @include desktop {
+    justify-content: flex-start;
+  }
 
-.logo__color {
-  color: getColor("object-primary-background-color");
-}
+  .logo__color {
+    color: getColor("object-primary-background-color");
+  }
 
-.logo__color--black {
-  color: getColor("text-quaternary-color");
+  .logo__color--black {
+    color: getColor("text-quaternary-color");
+    @include desktop {
+    }
+  }
 }
-
 .menu {
   display: none;
   margin-left: auto;
+  gap: 50px;
 
   @include tablet {
     display: flex;
