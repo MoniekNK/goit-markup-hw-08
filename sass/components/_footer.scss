@@ -213,7 +213,7 @@
   }
 
   &__btn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -235,22 +235,26 @@
     transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
+    @include desktop {
+      margin-left: 12px;
+      margin-top: 12px;
+    }
 
-  &__btn svg {
-    fill: getColor("parrent-color");
-    margin-left: 24px;
-  }
+    &__btn svg {
+      fill: getColor("parrent-color");
+      margin-left: 24px;
+    }
 
-  &__icon {
-    fill: getColor("parrent-color");
-  }
+    &__icon {
+      fill: getColor("parrent-color");
+    }
 
-  &__icon--end {
-    margin-left: 24px;
-  }
+    &__icon--end {
+      margin-left: 24px;
+    }
 
-  form {
-    display: flex;
+    form {
+      display: flex;
+    }
   }
 }
