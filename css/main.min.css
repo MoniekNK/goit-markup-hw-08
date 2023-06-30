@@ -15,6 +15,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  line-height: 1.14;
   gap: 30px;
 }
 @media screen and (min-width: 768px) {
@@ -25,30 +26,17 @@
     flex-direction: row;
   }
 }
-@media screen and (min-width: 1200px) {
-  .advantage__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-}
 .advantage__item {
   max-width: 450px;
-  display: block;
-  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .advantage__item {
-    width: 354px;
+    max-width: 354px;
   }
 }
 @media screen and (min-width: 1200px) {
   .advantage__item {
-    width: 270px;
+    max-width: 270px;
   }
 }
 .advantage__icons {
@@ -64,23 +52,14 @@
 }
 .advantage__title {
   text-transform: uppercase;
-  font-size: 14px;
-  margin-bottom: 10px;
   line-height: 1.14;
+  font-weight: 700;
   letter-spacing: 0.03em;
-  margin: 0 auto;
-  max-width: 365px;
   color: #212121;
 }
 @media screen and (min-width: 768px) {
   .advantage__title {
     text-align: left;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .advantage__title {
-    font-size: 44px;
-    max-width: 696px;
   }
 }
 .advantage__text {
@@ -631,6 +610,7 @@
   width: 53px;
   background-color: #2196f3;
   border-radius: 2px;
+  margin-top: 28px;
 }
 .menu__link--active {
   color: #2196f3;
