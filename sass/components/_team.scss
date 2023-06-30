@@ -28,13 +28,13 @@
 
     @include desktop {
       display: flex;
-      justify-content: space-between;
-      flex-wrap: nowrap;
+      gap: 30px;
+      flex-direction: column;
     }
     @include tablet {
+      min-width: 768px;
       flex-direction: row;
       flex-wrap: wrap;
-      display: flex;
     }
   }
 
