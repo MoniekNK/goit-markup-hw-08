@@ -5,18 +5,21 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  &__wrapper {
-    @include tablet {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
+  @include tablet {
+    display: flex;
+    flex-direction: column;
   }
   @include desktop {
-    &__wrapper {
-      text-align: start;
-      flex-direction: row;
-    }
+    text-align: start;
+    flex-direction: row;
+  }
+}
+
+.footer__wrapper {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -127,7 +130,7 @@
   flex-direction: column;
 
   @include tablet {
-    margin: 0;
+    padding-left: 144px;
   }
 
   @include desktop {
