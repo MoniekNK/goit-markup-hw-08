@@ -1,6 +1,7 @@
 .header {
   background-color: getColor("object-secondary-background-color");
   border-bottom: 1px solid getColor("header-border-bottom-color");
+  height: 80px;
 
   @include tablet {
     padding: 21px 0;
@@ -69,6 +70,8 @@
   padding-left: 0;
   margin-left: 83px;
   color: getColor("text-primary-color");
+  align-items: center;
+  flex-direction: row;
 
   &--start {
     text-decoration: none;
@@ -102,12 +105,11 @@
   content: "";
   position: absolute;
   display: block;
-
   height: 4px;
   width: 53px;
   background-color: #2196f3;
   border-radius: 2px;
-  margin-top: 39px;
+  margin-top: 16px;
 }
 
 .menu__link--active {

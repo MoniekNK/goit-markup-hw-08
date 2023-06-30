@@ -335,10 +335,14 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 60px 0;
 }
 @media screen and (min-width: 768px) {
   .join {
-    padding-left: 144px;
+    margin: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -499,6 +503,7 @@
 .header {
   background-color: #fff;
   border-bottom: 1px solid #ececec;
+  height: 80px;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -589,6 +594,13 @@
   padding-left: 0;
   margin-left: 83px;
   color: #212121;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 .menu__list--start {
   text-decoration: none;
@@ -627,7 +639,7 @@
   width: 53px;
   background-color: #2196f3;
   border-radius: 2px;
-  margin-top: 39px;
+  margin-top: 16px;
 }
 .menu__link--active {
   color: #2196f3;
@@ -1171,10 +1183,9 @@
   text-align: center;
   padding: 118px 0;
   background-color: #2f303a;
-  width: 100%;
-  background-image: url("../images/imgslogan1@1x.jpg"),
+  background-image: url("../images/imgslogan3@1x.jpg"),
     -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
-  background-image: url("../images/imgslogan1@1x.jpg"),
+  background-image: url("../images/imgslogan3@1x.jpg"),
     linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }
 @media screen and (min-device-pixel-ratio: 2),
@@ -1182,9 +1193,9 @@
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
   .slogan {
-    background-image: url("../images/imgslogan1@2x.jpg"),
+    background-image: url("../images/imgslogan3@2x.jpg"),
       -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
-    background-image: url("../images/imgslogan1@2x.jpg"),
+    background-image: url("../images/imgslogan3@2x.jpg"),
       linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   }
 }
@@ -1252,12 +1263,12 @@
         from(rgba(47, 48, 58, 0.4)),
         to(rgba(47, 48, 58, 0.4))
       ),
-      url(../images/imgslogan3@1x.jpg);
+      url(../images/imgslogan1@1x.jpg);
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/imgslogan3@1x.jpg);
+      url(../images/imgslogan1@1x.jpg);
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px) and (min-device-pixel-ratio: 2),
@@ -1282,12 +1293,12 @@
         from(rgba(47, 48, 58, 0.4)),
         to(rgba(47, 48, 58, 0.4))
       ),
-      url(../images/imgslogan3@2x.jpg);
+      url(../images/imgslogan1@2x.jpg);
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/imgslogan3@2x.jpg);
+      url(../images/imgslogan1@2x.jpg);
   }
 }
 .slogan__title {

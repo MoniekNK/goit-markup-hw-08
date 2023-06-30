@@ -27,9 +27,8 @@
   text-align: center;
   padding: 118px 0;
   background-color: getColor("page-secondary-background-color");
-  width: 100%;
 
-  background-image: url("../images/imgslogan1@1x.jpg"),
+  background-image: url("../images/imgslogan3@1x.jpg"),
     linear-gradient(
       getColor("background-color-for-gradient"),
       getColor("background-color-for-gradient")
@@ -39,7 +38,7 @@
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     & {
-      background-image: url("../images/imgslogan1@2x.jpg"),
+      background-image: url("../images/imgslogan3@2x.jpg"),
         linear-gradient(
           getColor("background-color-for-gradient"),
           getColor("background-color-for-gradient")
@@ -70,7 +69,7 @@
             getColor("background-color-for-gradient"),
             getColor("background-color-for-gradient")
           ),
-          url(../images/imgslogan3@1x.jpg);
+          url(../images/imgslogan1@1x.jpg);
 
         @media (min-device-pixel-ratio: 2),
           (-webkit-min-device-pixel-ratio: 2),
@@ -80,7 +79,7 @@
               getColor("background-color-for-gradient"),
               getColor("background-color-for-gradient")
             ),
-            url(../images/imgslogan3@2x.jpg);
+            url(../images/imgslogan1@2x.jpg);
         }
       }
     }
