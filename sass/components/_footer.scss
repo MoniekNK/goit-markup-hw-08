@@ -14,7 +14,7 @@
   }
   @include desktop {
     &__wrapper {
-      display: flex;
+      text-align: start;
       flex-direction: row;
     }
   }

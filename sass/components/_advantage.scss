@@ -47,6 +47,7 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: getColor("text-primary-color");
+    text-align: center;
 
     @include tablet {
       text-align: left;
