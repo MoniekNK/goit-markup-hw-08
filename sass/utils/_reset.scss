@@ -12,7 +12,14 @@ body {
   font-family: "Roboto", sans-serif;
   color: getColor("text-primary-color");
 }
-
+svg {
+  display: block;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 a {
   text-decoration: none;
 }
