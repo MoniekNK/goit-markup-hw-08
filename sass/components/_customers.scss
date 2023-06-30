@@ -46,6 +46,7 @@
     }
     @include desktop {
       max-width: 170px;
+      padding: 16px 32px;
     }
     &:hover,
     &:focus {
