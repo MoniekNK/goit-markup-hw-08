@@ -3,7 +3,6 @@
   @include desktop {
     display: flex;
     background-color: getColor("page-quarternary-background-color");
-    display: none;
 
     &__header {
       color: getColor("text-primary-color");
