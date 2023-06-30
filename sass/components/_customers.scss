@@ -3,13 +3,12 @@
 
   &__top {
     color: getColor("text-primary-color");
-    background-color: getColor("page-quarternary-background-color");
     font-size: 28px;
-    line-height: 1.16;
-    letter-spacing: 0.03em;
+    line-height: 1.178;
     text-align: center;
+    letter-spacing: 0.03em;
     margin-bottom: 30px;
-
+    background-color: getColor("page-quarternary-background-color");
     @include desktop {
       margin-bottom: 50px;
       font-size: 36px;
@@ -21,7 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 30px;
+    gap: 30px;
     padding: 0 15px;
     flex-wrap: wrap;
 
@@ -43,6 +42,7 @@
 
     @include tablet {
       max-width: 226px;
+      padding: 16px 60px;
     }
     @include desktop {
       max-width: 170px;
