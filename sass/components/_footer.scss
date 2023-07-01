@@ -179,28 +179,19 @@
   }
 }
 .newsletter {
-  margin-left: 30px;
-
-  @include desktop {
-    // display: block;
-    margin-left: 70px;
-    margin-top: 30px;
-    position: relative;
-  }
   &__text {
-    display: flex;
-    text-transform: uppercase;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.03em;
+    text-transform: uppercase;
     color: getColor("text-tertiary-color");
     padding-bottom: 20px;
-    padding-top: 12px;
-    justify-content: center;
+    padding-top: 60px;
+    @include tablet {
+      padding-top: 0;
+    }
 
     @include desktop {
-      justify-content: start;
-      display: flex;
       padding-top: 12px;
     }
   }
@@ -218,6 +209,10 @@
     width: 358px;
     padding: 15px 16px;
     margin-bottom: 30px;
+
+    @include desktop {
+      min-width: 358px;
+    }
   }
 
   &__btn {
