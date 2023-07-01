@@ -1,25 +1,24 @@
 .footer {
+  // display: none;
   background-color: getColor("page-secondary-background-color");
-  display: block;
   text-align: center;
-  padding-top: 60px;
   padding-bottom: 60px;
+  padding-top: 60px;
 
-  @include tablet {
+  .footer__wrapper {
     display: flex;
     flex-direction: column;
-  }
-  @include desktop {
-    text-align: start;
-    flex-direction: row;
-  }
-}
+    justify-content: center;
+    align-items: center;
 
-.footer__wrapper {
-  @include tablet {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @include desktop {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
   }
 }
 
