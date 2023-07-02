@@ -1,4 +1,4 @@
-.filters {
+.submenu {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 40px;
@@ -21,7 +21,9 @@
       row-gap: 0;
     }
   }
-  /*portfolio buttons stylization*/
+
+  /*portfolio*/
+
   &__button {
     background-color: getColor("page-tertiary-background-color");
     color: getColor("text-primary-color");
