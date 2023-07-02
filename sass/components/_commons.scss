@@ -6,6 +6,11 @@ body {
   color: getColor("text-primary-color");
   background-color: getColor("page-primary-background-color");
 }
+
+ul {
+  list-style-type: none;
+}
+
 svg {
   display: block;
 }
@@ -14,11 +19,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-/* dots deleted from uls :)*/
-ul {
-  list-style-type: none;
-}
-/* extra class for main div in each section of index.html and portfolio.html*/
+
 .container {
   max-width: 480px;
   width: 100%;
