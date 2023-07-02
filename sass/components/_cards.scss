@@ -1,84 +1,48 @@
-.photo {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 0;
-  gap: 30px;
-
-  &__project {
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
+.filters {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 40px;
+  @include tablet-size {
+    padding-bottom: 30px;
+  }
+  @include desktop-size {
+    padding-bottom: 50px;
   }
 
-  &__project:hover .overlay {
-    transform: translateX(0);
-  }
-
-  &__section {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    width: 370px;
-    height: 294px;
-
-    &__section:hover .overlay {
-      transform: translateX(0);
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 8px;
+    row-gap: 15px;
+    padding-left: 0;
+    @include tablet-size {
+      justify-content: center;
+      row-gap: 0;
     }
   }
-
-  &__img {
-    display: block;
-  }
-
-  &__border {
-    border-color: getColor("border-color");
-    border-top: 0;
-    padding: 20px 24px;
-    border: 1px solid getColor("border-color");
-    border-top: 0;
-  }
-
-  &__header {
+  /*portfolio buttons stylization*/
+  &__button {
+    background-color: getColor("page-tertiary-background-color");
     color: getColor("text-primary-color");
-    font-size: 18px;
-    line-height: 2;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    border-top: 0;
-    margin-bottom: 4px;
-  }
-
-  &__text {
-    color: getColor("text-secondary-color");
+    border: 0;
+    border-radius: 4px;
+    font-weight: 500;
     font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.03em;
-  }
-
-  .overlay {
-    background-color: getColor("overlay-background-color");
-    color: getColor("text-tertiary-color");
-    position: absolute;
-    left: 0;
-    top: 0px;
-    padding: 49px 45px 49px 24px;
-    width: 100%;
-    height: 100%;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0.03em;
-    transform: translateY(100%);
-    transition-property: transform;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    padding: 6px 22px;
+    transition-property: color, background-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  &__text {
-    color: getColor("text-secondary-color");
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.03em;
+
+    &:hover,
+    &:focus {
+      background-color: getColor("object-primary-background-color");
+      color: getColor("object-secondary-background-color");
+      box-shadow: 0px 4px 4px getColor("primary-box-shadow-color");
+    }
   }
 }

@@ -1,8 +1,7 @@
-.advantage {
+.advantages {
   letter-spacing: 0.03em;
   font-size: 14px;
   width: 100%;
-  background-color: getColor("page-quarternary-background-color");
   padding-bottom: 0;
   padding-left: 15px;
   padding-right: 15px;
@@ -10,63 +9,47 @@
   &__list {
     padding-left: 0;
     display: flex;
-    line-height: 1.14;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: center;
-
-    @include tablet {
+    @include tablet-size {
       flex-direction: row;
     }
   }
-
   &__item {
     max-width: 450px;
 
-    @include tablet {
+    @include tablet-size {
       max-width: 354px;
     }
-    @include desktop {
+    @include desktop-size {
       max-width: 270px;
     }
   }
-
-  &__icons {
-    background-color: getColor("page-tertiary-background-color");
-    padding: 25px 100px;
-    border-radius: 4px;
+  &__icon {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    padding: 25px 0;
+    background-color: getColor("page-tertiary-background-color");
+    border-radius: 4px;
   }
 
   &__title {
-    text-transform: uppercase;
-    line-height: 1.14;
-    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.14x;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: getColor("text-primary-color");
-    text-align: center;
+    margin: 30px 0 10px;
 
-    @include tablet {
+    @include tablet-size {
       text-align: left;
     }
   }
-
   &__text {
-    color: getColor("text-secondary-color");
-    font-size: 14px;
     font-weight: 400;
-    letter-spacing: 0.03em;
-    text-align: left;
+    font-size: 14px;
     line-height: 1.71;
-
-    @include tablet {
-      width: 354px;
-    }
-    @include desktop {
-      width: 270px;
-    }
+    letter-spacing: 0.03em;
+    color: getColor("text-secondary-color");
   }
 }

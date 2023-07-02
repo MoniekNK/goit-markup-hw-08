@@ -1,111 +1,66 @@
-.container {
-  max-width: 480px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-
-  &--set {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    position: relative;
-  }
-
-  @include tablet {
-    max-width: 768px;
-  }
-  @include desktop {
-    max-width: 1200px;
-  }
-}
-
-.slogan {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: 0 auto;
-  text-align: center;
-  padding: 200px 0;
+.top-container {
   background-color: getColor("page-secondary-background-color");
-
-  background-image: url("../images/imgslogan3@1x.jpg"),
+  background-image: url("../images/background-image.jpg"),
     linear-gradient(
       getColor("background-color-for-gradient"),
       getColor("background-color-for-gradient")
     );
+  background-size: 767px 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  padding: 118px 0;
+  max-width: 100%;
 
+  @include desktop-size {
+    padding: 200px 0;
+    background-size: 1600px 100%;
+  }
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     & {
-      background-image: url("../images/imgslogan3@2x.jpg"),
+      background-image: url("../images/background-image@2x.jpg"),
         linear-gradient(
           getColor("background-color-for-gradient"),
           getColor("background-color-for-gradient")
         );
-
-      @include tablet {
-        background-image: linear-gradient(
-            getColor("background-color-for-gradient"),
-            getColor("background-color-for-gradient")
-          ),
-          url(../images/imgslogan2@1x.jpg);
-
-        @media (min-device-pixel-ratio: 2),
-          (-webkit-min-device-pixel-ratio: 2),
-          (min-resolution: 192dpi),
-          (min-resolution: 2dppx) {
-          background-image: linear-gradient(
-              getColor("background-color-for-gradient"),
-              getColor("background-color-for-gradient")
-            ),
-            url(../images/imgslogan2@2x.jpg);
-        }
-      }
-      @include desktop {
-        padding: 200px 0;
-        background-size: contain;
-        background-image: linear-gradient(
-            getColor("background-color-for-gradient"),
-            getColor("background-color-for-gradient")
-          ),
-          url(../images/imgslogan1@1x.jpg);
-
-        @media (min-device-pixel-ratio: 2),
-          (-webkit-min-device-pixel-ratio: 2),
-          (min-resolution: 192dpi),
-          (min-resolution: 2dppx) {
-          background-image: linear-gradient(
-              getColor("background-color-for-gradient"),
-              getColor("background-color-for-gradient")
-            ),
-            url(../images/imgslogan1@2x.jpg);
-        }
-      }
     }
   }
-  &__title {
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    & {
+      background-image: url("../images/background-image@3x.jpg"),
+        linear-gradient(
+          getColor("background-color-for-gradient"),
+          getColor("background-color-for-gradient")
+        );
+    }
+  }
+  &__flex {
+    display: flex;
+    justify-content: center;
+  }
+  &__text {
     color: getColor("text-tertiary-color");
-    font-weight: 900;
-    text-transform: uppercase;
     font-size: 26px;
     font-weight: 900;
-    line-height: 1.4;
-    letter-spacing: 0.06em;
+    line-height: 1.61;
     text-align: center;
-    margin: 0 auto;
-    width: 365px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    max-width: 365px;
     margin-bottom: 30px;
-    width: 100%;
 
-    @include desktop {
+    @include desktop-size {
       font-size: 44px;
       line-height: 1.36;
       min-height: 120px;
       min-width: 696px;
     }
   }
-  &__btn {
+  &__button {
     background-color: getColor("object-primary-background-color");
     color: getColor("object-secondary-background-color");
     box-shadow: 0px 4px 4px getColor("primary-box-shadow-color");
@@ -123,6 +78,5 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    cursor: pointer;
   }
 }

@@ -3,14 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Webside about WebStudio Agency" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -18,87 +13,107 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="css/main.min.css" rel="stylesheet" />
+    <link href="./css/main.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!--HEADER-->
-    <header class="header">
-      <div class="container container--set">
-        <a class="logo" href="./index.html">
-          <span class="logo__color">Web</span
-          ><span class="logo__color logo__color--black">Studio</span></a
+    <header>
+      <div class="top-menu container">
+        <a class="logo logo--start" href="./index.html"
+          ><span class="logo__text">Web</span
+          ><span class="logo__text logo__text--black">Studio</span></a
         >
 
-        <nav class="menu">
-          <ul class="menu__list menu__list--start">
+        <nav class="navigation">
+          <ul class="navigation__list navigation__list--start">
             <li>
-              <a class="menu__link" href="./index.html">Agencja</a>
+              <a class="navigation__link" href="./index.html">Agencja</a>
             </li>
             <li>
-              <a class="menu__link menu__link--active" href="./portfolio.html"
+              <a
+                class="navigation__link navigation__link--portfolio-active"
+                href="./portfolio.html"
                 >Portfolio</a
               >
             </li>
-            <li><a class="menu__link" href="#">Kontakt</a></li>
+            <li><a class="navigation__link" href="#">Kontakt</a></li>
           </ul>
         </nav>
 
         <ul class="contact">
-          <li class="contact__item">
-            <a class="contact__link" href="mailto:info@devstudio.com">
-              <svg class="contact__icon" width="16" height="12">
+          <li>
+            <a class="contact__link" href="mailto:info@devstudio.com"
+              ><svg class="contact__icon" width="16" height="16">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
-              info@devstudio.com
-            </a>
+              info@devstudio.com</a
+            >
           </li>
-
-          <li class="contact__item">
-            <a class="contact__link" href="tel:+48 111 111 111">
-              <svg class="contact__icon" width="10" height="16">
+          <li>
+            <a class="contact__link" href="tel:+48111111111">
+              <svg class="contact__icon" width="12" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +48 111 111 111</a
             >
           </li>
         </ul>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-toggle__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-mobile-menu-icon"></use>
+          </svg>
+        </button>
       </div>
     </header>
-
     <main>
-      <section class="section">
-        <div class="submenu">
-          <ul class="submenu__buttons">
+      <section class="section section--white section--bottom-fixed">
+        <div class="filters container">
+          <h1 hidden>What we can create for You</h1>
+          <ul class="filters__list">
             <li>
-              <button class="submenu__btn" type="button">Wszystkie</button>
+              <button class="filters__button" type="button">Wszystkie</button>
             </li>
             <li>
-              <button class="submenu__btn" type="button">Strony</button>
+              <button class="filters__button" type="button">Strony</button>
             </li>
             <li>
-              <button class="submenu__btn" type="button">Aplikacje</button>
+              <button class="filters__button" type="button">Aplikacje</button>
             </li>
             <li>
-              <button class="submenu__btn" type="button">Dizajn</button>
+              <button class="filters__button" type="button">Dizajn</button>
             </li>
             <li>
-              <button class="submenu__btn" type="button">Marketing</button>
+              <button class="filters__button" type="button">Marketing</button>
             </li>
           </ul>
         </div>
-
-        <!--OFFER-->
-
-        <div class="container">
-          <ul class="photo">
-            <li class="photo__project">
-              <div class="photo__section">
+      </section>
+      <section class="section section--white section--fixed">
+        <div class="projects container">
+          <h2 hidden>Offer categories</h2>
+          <ul class="projects__list">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="photo__img"
-                  src="./images/img7.jpg"
-                  width="370"
-                  height="294"
                   alt="Technocrack - foto"
+                  src="./technocrack.jpg"
+                  srcset="
+                    ./images/technocrack.jpg   370w,
+                    ./images/technocrack2.jpg  740w,
+                    ./images/technocrack3.jpg 1110w
+                  "
+                  sizes="
+                  (max-width: 767px) 370px,  
+                  (max-width: 1199px) 740px, 1100px"
                 />
                 <div class="overlay">
                   <p>
@@ -109,19 +124,22 @@
                   </p>
                 </div>
               </div>
-              <div class="photo__border">
-                <h3 class="photo__header">Technocrack</h3>
-                <p class="photo__text">Strona internetowa</p>
-              </div>
+              <h3 class="projects__title">Technocrack</h3>
+              <p class="projects__description">Strona internetowa</p>
             </li>
-            <li class="photo__project">
-              <div class="photo__section">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="photo__img"
-                  src="./images/img8.jpg"
-                  width="370"
-                  height="294"
-                  alt="Grafika New Orlean vs Golden Star - foto"
+                  alt="New Orlean vs Golden Star - foto"
+                  src="/images/basketball.jpg"
+                  srcset="
+                    ./images/basketball.jpg     370w,
+                    ./images/basketball@2x.jpg  740w,
+                    ./images/basketball@3x.jpg 1110w
+                  "
+                  sizes="
+                  (max-width: 767px) 370px,  
+                  (max-width: 1199px) 740px, 1100px"
                 />
                 <div class="overlay">
                   <p>
@@ -132,19 +150,22 @@
                   </p>
                 </div>
               </div>
-              <div class="photo__border">
-                <h3 class="photo__header">Grafika New Orlean vs Golden Star</h3>
-                <p class="photo__text">Dizajn</p>
-              </div>
+              <h3 class="projects__title">Grafika New Orlean vs Golden Star</h3>
+              <p class="projects__description">Dizajn</p>
             </li>
-            <li class="photo__project">
-              <div class="photo__section">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="photo-img"
-                  src="./images/img9.jpg"
-                  width="370"
-                  height="294"
-                  alt="Restauracja Seafood - foto"
+                  alt="Restauracja Seafood - foto "
+                  src="./images/seafood.jpg"
+                  srcset="
+                    ./images/seafood.jpg     370w,
+                    ./images/seafood@2x.jpg  740w,
+                    ./images/seafood@3x.jpg 1110w
+                  "
+                  sizes="
+                  (max-width: 767px) 370px,  
+                  (max-width: 1199px) 740px, 1100px"
                 />
                 <div class="overlay">
                   <p>
@@ -155,20 +176,22 @@
                   </p>
                 </div>
               </div>
-              <div class="photo__border">
-                <h3 class="photo__header">Restauracja Seafood</h3>
-                <p class="photo__text">Aplikacja</p>
-              </div>
+              <h3 class="projects__title">Restauracja Seafood</h3>
+              <p class="projects__description">Aplikacja</p>
             </li>
-
-            <li class="photo__project">
-              <div class="photo__section">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="photo__img"
-                  src="./images/img10.jpg"
-                  width="370"
-                  height="294"
-                  alt="Projekt Prime-foto"
+                  alt="Black headphones"
+                  src="./images/prime.jpg"
+                  srcset="
+                    ./images/prime.jpg     370w,
+                    ./images/prime@2x.jpg  740w,
+                    ./images/prime@3x.jpg 1110w
+                  "
+                  sizes="
+                  (max-width: 767px) 370px,  
+                  (max-width: 1199px) 740px, 1100px"
                 />
                 <div class="overlay">
                   <p>
@@ -179,20 +202,22 @@
                   </p>
                 </div>
               </div>
-              <div class="photo__border">
-                <h3 class="photo__header">Projekt Prime</h3>
-                <p class="photo__text">Marketing</p>
-              </div>
+              <h3 class="projects__title">Projekt Prime</h3>
+              <p class="projects__description">Marketing</p>
             </li>
-
-            <li class="photo__project">
-              <div class="photo__section">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="photo__img"
-                  src="./images/img11.jpg"
-                  width="370"
-                  height="294"
-                  alt="Projekt Boxes - foto"
+                  alt="Boxes"
+                  src="./images/boxes.jpg"
+                  srcset="
+                    ./images/boxes.jpg     370w,
+                    ./images/boxes@2x.jpg  740w,
+                    ./images/boxes@3x.jpg 1110w
+                  "
+                  sizes="
+                  (max-width: 767px) 370px,  
+                  (max-width: 1199px) 740px, 1100px"
                 />
                 <div class="overlay">
                   <p>
@@ -203,20 +228,22 @@
                   </p>
                 </div>
               </div>
-              <div class="photo__border">
-                <h3 class="photo__header">Projekt Boxes</h3>
-                <p class="photo__text">Aplikacja</p>
-              </div>
+              <h3 class="projects__title">Projekt Boxes</h3>
+              <p class="projects__description">Aplikacja</p>
             </li>
-
-            <li class="photo__project">
-              <div class="photo__section">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="photo___img"
-                  src="./images/img12.jpg"
-                  width="370"
-                  height="294"
-                  alt="Inspiration has no Borders - foto"
+                  alt="Inspiration has no Boarders website on laptop screen"
+                  src="./images/inspiration.jpg"
+                  srcset="
+                    ./images/inspiration.jpg     370w,
+                    ./images/inspiration@2x.jpg  740w,
+                    ./images/inspiration@3x.jpg 1110w
+                  "
+                  sizes="
+                  (max-width: 767px) 370px,  
+                  (max-width: 1199px) 740px, 1100px"
                 />
                 <div class="overlay">
                   <p>
@@ -227,23 +254,25 @@
                   </p>
                 </div>
               </div>
-              <div class="photo__border">
-                <h3 class="photo__header">Inspiration has no Borders</h3>
-                <p class="photo__text">Strona internetowa</p>
-              </div>
+              <h3 class="projects__title">Inspiration has no Boarders</h3>
+              <p class="projects__description">Strona internetowa</p>
             </li>
-
-            <li class="photo__project">
-              <div class="photo__section">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="photo__img"
-                  src="./images/img13.jpg"
-                  width="370"
-                  height="294"
-                  alt="Magazyn Limited Edition - foto"
+                  alt="Magazyn Limited Edition"
+                  src="./images/magazyn.jpg"
+                  srcset="
+                    ./images/magazyn.jpg     370w,
+                    ./images/magazyn@2x.jpg  740w,
+                    ./images/magazyn@3x.jpg 1110w
+                  "
+                  sizes="
+                  (max-width: 767px) 370px,  
+                  (max-width: 1199px) 740px, 1100px"
                 />
                 <div class="overlay">
-                  <p class="overlay__text">
+                  <p>
                     Technocrack jest popularną platformą wykorzystywaną do
                     rozpowszechniania koronawirusa. Firmy wykorzystują tę
                     platformę do celów szpiegowskich i ataków na
@@ -251,23 +280,25 @@
                   </p>
                 </div>
               </div>
-              <div class="photo__border">
-                <h3 class="photo__header">Magazyn Limited Edition</h3>
-                <p class="photo__text">Dizajn</p>
-              </div>
+              <h3 class="projects__title">Magazyn Limited Edition</h3>
+              <p class="projects__description">Dizajn</p>
             </li>
-
-            <li class="photo__project">
-              <div class="photo__section">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="photo__img"
-                  src="./images/img14.jpg"
-                  width="370"
-                  height="294"
-                  alt="Projekt LAB - foto"
+                  alt="Projekt LAB"
+                  src="./images/lab.jpg"
+                  srcset="
+                    ./images/lab.jpg     370w,
+                    ./images/lab@2x.jpg  740w,
+                    ./images/lab@3x.jpg 1110w
+                  "
+                  sizes="
+                  (max-width: 767px) 370px,  
+                  (max-width: 1199px) 740px, 1100px"
                 />
                 <div class="overlay">
-                  <p class="overlay__text">
+                  <p>
                     Technocrack jest popularną platformą wykorzystywaną do
                     rozpowszechniania koronawirusa. Firmy wykorzystują tę
                     platformę do celów szpiegowskich i ataków na
@@ -275,23 +306,25 @@
                   </p>
                 </div>
               </div>
-              <div class="photo__border">
-                <h3 class="photo__header">Projekt LAB</h3>
-                <p class="photo__text">Marketing</p>
-              </div>
+              <h3 class="projects__title">Projekt LAB</h3>
+              <p class="projects__description">Marketing</p>
             </li>
-
-            <li class="photo__project">
-              <div class="photo__section">
+            <li class="projects__item">
+              <div class="projects__image">
                 <img
-                  class="photo__img"
-                  src="./images/img15.jpg"
-                  width="370"
-                  height="294"
-                  alt="Growing Business-foto"
+                  alt="Growing business open on laptop screen"
+                  src="./images/growing.jpg"
+                  srcset="
+                    ./images/growing.jpg     370w,
+                    ./images/growing@2x.jpg  740w,
+                    ./images/growing@3x.jpg 1110w
+                  "
+                  sizes="
+                  (max-width: 767px) 370px,  
+                  (max-width: 1199px) 740px, 1100px"
                 />
                 <div class="overlay">
-                  <p class="overlay__text">
+                  <p>
                     Technocrack jest popularną platformą wykorzystywaną do
                     rozpowszechniania koronawirusa. Firmy wykorzystują tę
                     platformę do celów szpiegowskich i ataków na
@@ -299,105 +332,114 @@
                   </p>
                 </div>
               </div>
-              <div class="photo__border">
-                <h3 class="photo__header">Growing Business</h3>
-                <p class="photo__text">Aplikacja</p>
-              </div>
+              <h3 class="projects__title">Growing Business</h3>
+              <p class="projects__description">Aplikacja</p>
             </li>
           </ul>
         </div>
       </section>
     </main>
-    <!--FOOTER-->
-    <footer class="footer">
-      <div class="container footer__wrapper">
-        <div class="footer__box">
-          <p>
-            <a class="logo" href="./index.html">
-              <span class="logo__first">Web</span
-              ><span class="logo__second logo__second--white">Studio</span></a
-            >
-          </p>
-          <!--ADDRESS-->
-
-          <ul class="address__list">
-            <li>
+    <footer>
+      <div class="container footer">
+        <div class="flex-wrapper">
+          <div class="address address--start">
+            <p>
+              <a class="logo logo--indented" href="./index.html"
+                ><span class="logo__text">Web</span
+                ><span class="logo__text logo__text--white">Studio</span></a
+              >
+            </p>
+            <address>
+              <ul class="address__list">
+                <li>
+                  <a
+                    class="address__link"
+                    href="https://www.google.pl/maps/place/al.+Jerozolimskie+21,+00-508+Warszawa/@52.2305286,21.013843,17z/data=!3m1!4b1!4m5!3m4!1s0x471eccf3e52bee23:0xc5163bc7ec8d4437!8m2!3d52.2305286!4d21.0160317"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >m. Warszawa, Aleje Jerozolimskie 21</a
+                  >
+                </li>
+                <li>
+                  <a class="address__link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li>
+                  <a class="address__link" href="tel:+48111111111"
+                    >+48 111 111 111</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-social">
+            <h3 class="footer-social__heading">Dołącz do nas</h3>
+            <!--social-portfolio-->
+            <div class="social social--start">
               <a
-                class="address__link"
-                href="https://goo.gl/maps/rMT2Ymf6yajYnDqk7"
-                rel="noopener noreferrer nofollow"
-                >m. Warszawa, Aleje Jerozolimskie 21</a
-              >
-            </li>
-            <li>
-              <a class="address__item" href="mailto:info@example.com"
-                >info@example.com</a
-              >
-            </li>
-            <li>
-              <a class="address__item" href="tel:+48111111111"
-                >+48 111 111 111</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="join">
-          <h3 class="join__title">dołącz do nas</h3>
-          <ul class="join__list">
-            <li class="join__item">
-              <a href="#">
-                <svg width="20" height="20" class="join__icon">
+                class="social__link social__link--footer"
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+                ><svg width="20" height="20">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
-            </li>
-            <li class="join__item">
-              <a href="#">
-                <svg width="20" height="20" class="join__icon">
+
+              <a
+                class="social__link social__link--footer"
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+                ><svg width="20" height="20">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
-            </li>
-            <li class="join__item">
-              <a href="#">
-                <svg width="20" height="20" class="join__icon">
+
+              <a
+                class="social__link social__link--footer"
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                ><svg width="20" height="20">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
-            </li>
-            <li class="join__item">
-              <a href="#">
-                <svg width="20" height="20" class="join__icon">
+
+              <a
+                class="social__link social__link--footer"
+                href="https://pl.linkedin.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+                ><svg width="20" height="20">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
-
         <!--newsletter-->
-
         <div class="newsletter">
-          <h3 class="newsletter__text">Zapisz się do newslettera</h3>
-          <div class="newsletter__top">
+          <h3 class="newsletter__heading">Zapisz się do newslettera</h3>
+          <div class="newsletter__form">
             <form>
-              <label>
+              <label class="newsletter__label">
                 <input
-                  class="newsletter__click"
+                  class="newsletter__input"
                   type="email"
-                  name="E-mail"
-                  placeholder="E-mail "
+                  name="newsletter_email"
+                  placeholder="E-mail"
                 />
               </label>
-
-              <button class="newsletter__btn" type="submit">
+              <button class="newsletter__button" type="submit">
                 Zapisz się
                 <svg
                   class="newsletter__icon newsletter__icon--end"
                   width="24"
                   height="24"
                 >
-                  <use href="./images/icon.svg#icon-send"></use>
+                  <use href="./images/icons.svg#icon-send"></use>
                 </svg>
               </button>
             </form>
@@ -405,13 +447,92 @@
         </div>
       </div>
     </footer>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-toggle__icon" width="40" height="40">
+          <use href="./images/icons.svg#icon-close-mobile-menu-icon"></use>
+        </svg>
+      </button>
+      <nav>
+        <ul class="menu-container__list">
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="./index.html">Agencja</a>
+          </li>
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="./portfolio.html"
+              >Portfolio</a
+            >
+          </li>
+          <li class="menu-container__item">
+            <a class="menu-container__link" href="#">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="menu-container__flex">
+        <ul class="menu-container__contacts">
+          <li class="menu-container__item">
+            <a
+              class="menu-container__link menu-container__link--tel"
+              href="tel:+48111111111"
+              >+48 111 111 111</a
+            >
+          </li>
+          <li class="menu-container__item">
+            <a
+              class="menu-container__link menu-container__link--mail"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
 
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button type="button" class="close-btn" data-modal-close>X</button>
+        <ul class="menu-container__socials">
+          <li class="menu-container__item menu-container__item--social">
+            <a
+              class="menu-container__link menu-container__link--social"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Instagram</a
+            >
+          </li>
+          <li class="menu-container__item menu-container__item--social">
+            <a
+              class="menu-container__link menu-container__link--social"
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Twitter</a
+            >
+          </li>
+          <li class="menu-container__item menu-container__item--social">
+            <a
+              class="menu-container__link menu-container__link--social"
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Facebook</a
+            >
+          </li>
+          <li class="menu-container__item menu-container__item--social">
+            <a
+              class="menu-container__link menu-container__link--social"
+              href="https://pl.linkedin.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Linkedin</a
+            >
+          </li>
+        </ul>
       </div>
     </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
 
-    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

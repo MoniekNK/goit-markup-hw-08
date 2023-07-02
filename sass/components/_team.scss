@@ -1,107 +1,82 @@
-.team {
-  background-color: getColor("page-tertiary-background-color");
-  width: 100%;
-  height: auto;
+.top-container {
+  background-color: getColor("page-secondary-background-color");
+  background-image: url("../images/background-image.jpg"),
+    linear-gradient(
+      getColor("background-color-for-gradient"),
+      getColor("background-color-for-gradient")
+    );
+  background-size: 767px 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  padding: 118px 0;
+  max-width: 100%;
 
-  &__header {
-    color: getColor("text-primary-color");
-    font-size: 28px;
-    line-height: 1.178;
-    text-align: center;
-    letter-spacing: 0.03em;
-    margin-bottom: 30px;
-
-    @include desktop {
-      margin-bottom: 50px;
-      font-size: 36px;
-      line-height: 1.16;
+  @include desktop-size {
+    padding: 200px 0;
+    background-size: 1600px 100%;
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    & {
+      background-image: url("../images/background-image@2x.jpg"),
+        linear-gradient(
+          getColor("background-color-for-gradient"),
+          getColor("background-color-for-gradient")
+        );
     }
   }
-
-  &__list {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    list-style: none;
-
-    @include tablet {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    @include desktop {
-      flex-direction: row;
-      flex-wrap: nowrap;
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    & {
+      background-image: url("../images/background-image@3x.jpg"),
+        linear-gradient(
+          getColor("background-color-for-gradient"),
+          getColor("background-color-for-gradient")
+        );
     }
   }
-
-  &__item {
-    max-width: 450px;
-    background-color: getColor("object-secondary-background-color");
-    box-shadow: 0px 2px 1px getColor("quarternary-box-shadow-color"),
-      0px 1px 1px getColor("tertiary-box-shadow-color"),
-      0px 1px 3px getColor("secondary-box-shadow-color");
-    border-radius: 0px 0px 4px 4px;
-
-    @include tablet {
-      max-width: 354px;
-    }
-    @include desktop {
-      max-width: 270px;
-    }
-  }
-
-  &__img {
-    display: block;
-    width: 100%;
-  }
-  &__top {
-    color: getColor("text-primary-color");
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.2;
-    text-align: center;
-    letter-spacing: 0.03em;
-    margin: 30px auto 10px;
-  }
-
-  &__text {
-    color: getColor("text-secondary-color");
-    font-size: 16px;
-    line-height: 1.2;
-    text-align: center;
-    letter-spacing: 0.03em;
-    margin: 10px auto 16px;
-  }
-
-  &__social {
+  &__flex {
     display: flex;
     justify-content: center;
-    align-items: center;
-    column-gap: 10px;
-    padding-bottom: 30px;
   }
+  &__text {
+    color: getColor("text-tertiary-color");
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.61;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    max-width: 365px;
+    margin-bottom: 30px;
 
-  &__link {
-    display: block;
-    fill: getColor("social-links-primary-icon-color");
-    background-color: getColor("object-secondary-background-color");
-    transition-property: fill, background-color, border-radius;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 12px;
-    border-radius: 50%;
-
-    &:hover,
-    &:focus {
-      fill: getColor("social-links-icon-hover-color");
-      background-color: getColor("social-links-primary-background-color");
+    @include desktop-size {
+      font-size: 44px;
+      line-height: 1.36;
+      min-height: 120px;
+      min-width: 696px;
     }
   }
-
-  &__icon {
+  &__button {
+    background-color: getColor("object-primary-background-color");
+    color: getColor("object-secondary-background-color");
+    box-shadow: 0px 4px 4px getColor("primary-box-shadow-color");
+    border-radius: 4px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.85;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    min-width: 200px;
+    min-height: 50px;
+    cursor: pointer;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
