@@ -2,14 +2,17 @@
   padding-top: 16px;
   padding-bottom: 16px;
   text-decoration: none;
+
   @include tablet-size {
     padding-top: 26px;
     padding-bottom: 26px;
   }
+
   @include desktop-size {
     padding-top: 24px;
     padding-bottom: 25px;
   }
+
   &--start {
     @include tablet-size {
       margin-right: 83px;
